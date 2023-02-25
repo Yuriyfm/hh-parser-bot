@@ -1,13 +1,13 @@
 FROM python:3.7-slim
 
-RUN mkdir /hhParserBot
+RUN mkdir /hh_parser_bot
 
-COPY requirements.txt /hhParserBot
+COPY requirements.txt /hh_parser_bot
 
-RUN pip3 install -r /hhParserBot/requirements.txt --no-cache-dir
+RUN pip3 install -r /hh_parser_bot/requirements.txt --no-cache-dir
 
-COPY . /hhParserBot
+COPY . /hh_parser_bot
 
-WORKDIR /hhParserBot
+WORKDIR /hh_parser_bot
 
 CMD [ "python", "./hh_parser.py" ]

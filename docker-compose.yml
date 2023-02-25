@@ -2,9 +2,9 @@
 version: '3.7'
 
 services:
-  hhParserBot:
-    image: hhParserBot_image
-    container_name: hhParserBot
+  hh_parser_bot:
+    image: hh_parser_bot_image
+    container_name: hh_parser_bot
     build:
       context: .
       dockerfile: Dockerfile
