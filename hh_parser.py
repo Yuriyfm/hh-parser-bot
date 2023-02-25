@@ -63,7 +63,7 @@ def main():
                     break
 
             except Exception as e:
-                bot.send_message(int(CHAT_ID), f'бот упал с ошибкой: {e}')
+                bot.send_message(int(CHAT_ID), f'бот упал с ошибкой: {repr(e)}')
                 print(e)
                 exit()
         time.sleep(60)
