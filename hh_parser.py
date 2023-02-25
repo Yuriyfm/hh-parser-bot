@@ -66,7 +66,7 @@ def main():
                 bot.send_message(int(CHAT_ID), f'бот упал с ошибкой: {e}')
                 print(e)
                 exit()
-        print(datetime.now())
+        time.sleep(60)
 
 
 # блок main
