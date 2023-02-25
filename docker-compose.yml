@@ -1,0 +1,14 @@
+# версия docker-compose
+version: '3.7'
+
+services:
+  hhParserBot:
+    image: hhParserBot_image
+    container_name: hhParserBot
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    env_file:
+      - ./.env
+
