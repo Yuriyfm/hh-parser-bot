@@ -55,9 +55,11 @@ def main():
         for page in range(0, 20):
             try:
                 jsObj = json.loads(getPage(page))
-                if jsObj['items']:
+                if 'items' in jsObj:
                     for i in jsObj['items']:
                         is_new(i)
+                else:
+                    bot.send_message(int(CHAT_ID), f'не выгрузились вакансии. объект: {repr(jsObj)}')
 
                 if (jsObj['pages'] - page) <= 1:
                     break
